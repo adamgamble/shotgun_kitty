@@ -26,9 +26,8 @@ Pin 10  - Motor 4 (Back right Motor - Clockwise - Pusher Propeller)
 You must use a version of the Arduino IDE >= 1.5.
 
 Shotgun Kitty uses rake to facilitate easy building and verifying. There is an
-rvmrc that specifies the ruby version (but honestly currently any ruby version
-will do) The Rakefile parses a YAML file at config/arduino.yml this file should
-look something like this:
+rvmrc that specifies the ruby version (which is currently 2.1) The Rakefile
+parses a YAML file at config/arduino.yml this file should look something like this:
 
 ```
 arduino:

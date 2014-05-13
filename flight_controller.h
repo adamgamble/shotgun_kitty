@@ -8,6 +8,7 @@ class FlightController {
     FlightController(RCInputs* _rc_inputs);
     void loop();
     int flight_mode;
+    bool armed;
 
   private:
     RCInputs* rc_inputs;

@@ -9,6 +9,10 @@ class RCInputs {
 
     //Public Variables
     int current_throttle;
+    int current_aileron;
+    int current_elevator;
+    int current_rudder;
+    int current_flight_mode;
 
   private:
     void setup_pins();

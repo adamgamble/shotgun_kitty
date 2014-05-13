@@ -10,5 +10,5 @@ Telemetry::Telemetry(RCInputs* _rc_inputs) {
 void Telemetry::telemetry_loop() {
   Serial.print("Throttle Percentage: ");
   Serial.print(rc_inputs->throttle_percentage());
-  Serial.print("\n");
+  Serial.print("\r\n");
 }

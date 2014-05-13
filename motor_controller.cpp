@@ -8,7 +8,7 @@
 #define motor_4_pin 10
 
 MotorController::MotorController() {
-  //setup_motors();
+  setup_motors();
 }
 
 void MotorController::setup_motors() {

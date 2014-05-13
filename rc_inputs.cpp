@@ -14,7 +14,7 @@ RCInputs::RCInputs() {
   setup_pins();
 }
 
-void RCInputs::get_inputs() {
+void RCInputs::loop() {
   current_throttle    = read_input(throttle_pin);
   current_aileron     = read_input(aileron_pin);
   current_elevator    = read_input(elevator_pin);

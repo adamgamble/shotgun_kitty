@@ -2,14 +2,16 @@
 #define telemetry_h
 
 #include "rc_inputs.h"
+#include "flight_controller.h"
 
 class Telemetry {
   public:
-    Telemetry(RCInputs* rc_inputs);
-    void telemetry_loop();
+    Telemetry(RCInputs* _rc_inputs, FlightController* _flight_controller);
+    void loop();
 
   private:
     RCInputs* rc_inputs;
+    FlightController* flight_controller;
 };
 
 #endif

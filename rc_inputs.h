@@ -4,7 +4,7 @@
 class RCInputs {
   public:
     RCInputs();
-    void get_inputs();
+    void loop();
     float throttle_percentage();
 
     //Public Variables

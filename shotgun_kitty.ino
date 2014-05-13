@@ -1,8 +1,10 @@
 #include "rc_inputs.h"
 #include "telemetry.h"
+#include "flight_controller.h"
 
 RCInputs rc_inputs;
-Telemetry telemetry(&rc_inputs);
+FlightController flight_controller(&rc_inputs);
+Telemetry telemetry(&rc_inputs, &flight_controller);
 
 void setup()
 {
@@ -11,6 +13,7 @@ void setup()
 
 void loop()
 {
-  rc_inputs.get_inputs();
-  telemetry.telemetry_loop();
+  rc_inputs.loop();
+  flight_controller.loop();
+  telemetry.loop();
 }

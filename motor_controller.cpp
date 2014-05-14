@@ -17,18 +17,20 @@ void MotorController::setup_motors() {
   pinMode(motor_4_pin, OUTPUT);
 }
 
-void MotorController::set_motor_speed(int speed) {
-  digitalWrite(motor_1_pin, HIGH);
-  digitalWrite(motor_2_pin, HIGH);
-  digitalWrite(motor_3_pin, HIGH);
-  digitalWrite(motor_4_pin, HIGH);
-  delayMicroseconds(speed);
-  digitalWrite(motor_1_pin, LOW);
-  digitalWrite(motor_2_pin, LOW);
-  digitalWrite(motor_3_pin, LOW);
-  digitalWrite(motor_4_pin, LOW);
-}
-
 void MotorController::loop() {
+  digitalWrite(motor_1_pin, HIGH);
+  delayMicroseconds(motor_1_speed);
+  digitalWrite(motor_1_pin, LOW);
 
+  digitalWrite(motor_2_pin, HIGH);
+  delayMicroseconds(motor_2_speed);
+  digitalWrite(motor_2_pin, LOW);
+
+  digitalWrite(motor_3_pin, HIGH);
+  delayMicroseconds(motor_3_speed);
+  digitalWrite(motor_3_pin, LOW);
+
+  digitalWrite(motor_4_pin, HIGH);
+  delayMicroseconds(motor_4_speed);
+  digitalWrite(motor_4_pin, LOW);
 }

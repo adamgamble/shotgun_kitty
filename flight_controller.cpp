@@ -11,5 +11,8 @@ FlightController::FlightController(RCInputs* _rc_inputs, MotorController* _motor
 }
 
 void FlightController::loop() {
-  motor_controller->set_motor_speed(rc_inputs->current_throttle);
+  motor_controller->motor_1_speed = rc_inputs->current_throttle;
+  motor_controller->motor_2_speed = rc_inputs->current_throttle;
+  motor_controller->motor_3_speed = rc_inputs->current_throttle;
+  motor_controller->motor_4_speed = rc_inputs->current_throttle;
 }

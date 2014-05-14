@@ -16,10 +16,10 @@ RCInputs::RCInputs() {
 
 void RCInputs::loop() {
   current_throttle    = read_input(throttle_pin);
-  current_aileron     = read_input(aileron_pin);
-  current_elevator    = read_input(elevator_pin);
-  current_rudder      = read_input(rudder_pin);
-  current_flight_mode = read_input(flight_mode_pin);
+  //current_aileron     = read_input(aileron_pin);
+  //current_elevator    = read_input(elevator_pin);
+  //current_rudder      = read_input(rudder_pin);
+  //current_flight_mode = read_input(flight_mode_pin);
 }
 
 void RCInputs::setup_pins() {
@@ -31,7 +31,7 @@ void RCInputs::setup_pins() {
 }
 
 int RCInputs::read_input(int pin) {
-  return pulseIn(pin, HIGH, 25000);
+  return pulseIn(pin, HIGH);
 }
 
 float RCInputs::throttle_percentage() {

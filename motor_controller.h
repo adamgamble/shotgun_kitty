@@ -7,6 +7,7 @@ class MotorController {
   public:
     MotorController();
     void loop();
+    void set_motor_speed(int speed);
 
   private:
     void setup_motors();

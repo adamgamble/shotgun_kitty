@@ -16,3 +16,6 @@ void FlightController::loop() {
   motor_controller->motor_3_speed = rc_inputs->current_throttle;
   motor_controller->motor_4_speed = rc_inputs->current_throttle;
 }
+
+
+

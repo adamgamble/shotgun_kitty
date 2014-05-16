@@ -11,9 +11,9 @@ Telemetry::Telemetry(RCInputs* _rc_inputs, FlightController* _flight_controller,
 }
 
 void Telemetry::loop() {
-  Serial.print("Throttle Percentage\t Current Flightmode\t Roll\t Pitch\t Heading ");
+  Serial.print("Throttle\t Current Flightmode\t Roll\t Pitch\t Heading\t X Rotation\t Y Rotation\t Z Movement");
   Serial.print("\r\n");
-  Serial.print(rc_inputs->throttle_percentage());
+  Serial.print(rc_inputs->current_throttle);
   Serial.print("\t");
   Serial.print("\t");
   Serial.print("\t");
@@ -26,6 +26,12 @@ void Telemetry::loop() {
   Serial.print(motion_controller->current_pitch);
   Serial.print("\t");
   Serial.print(motion_controller->current_heading);
+  Serial.print("\t");
+  Serial.print(motion_controller->current_x_rotation);
+  Serial.print("\t");
+  Serial.print(motion_controller->current_y_rotation);
+  Serial.print("\t");
+  Serial.print(motion_controller->current_z_rotation);
   Serial.print("\r\n");
 }
 

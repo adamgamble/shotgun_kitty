@@ -6,6 +6,8 @@ class MotorController {
     MotorController();
     void loop();
     void set_motor_speed(int speed);
+    void idle_motors();
+    void turn_motors_off();
     int motor_1_speed;
     int motor_2_speed;
     int motor_3_speed;

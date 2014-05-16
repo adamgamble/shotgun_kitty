@@ -7,9 +7,6 @@
 #define rudder_pin      5
 #define flight_mode_pin 6
 
-#define min_throttle 1085
-#define max_throttle 1872
-
 RCInputs::RCInputs() {
   setup_pins();
 }
@@ -32,12 +29,6 @@ void RCInputs::setup_pins() {
 
 int RCInputs::read_input(int pin) {
   return pulseIn(pin, HIGH, 20000);
-}
-
-float RCInputs::throttle_percentage() {
-  int total_throttle = max_throttle - min_throttle;
-  int throttle = current_throttle - min_throttle;
-  return (float)throttle / (float)total_throttle;
 }
 
 

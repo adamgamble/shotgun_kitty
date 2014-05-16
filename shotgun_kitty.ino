@@ -7,7 +7,7 @@
 RCInputs rc_inputs;
 MotionController motion_controller;
 MotorController motor_controller;
-FlightController flight_controller(&rc_inputs, &motor_controller);
+FlightController flight_controller(&rc_inputs, &motion_controller, &motor_controller);
 Telemetry telemetry(&rc_inputs, &flight_controller, &motion_controller);
 
 void setup()

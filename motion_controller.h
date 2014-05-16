@@ -5,6 +5,7 @@
 #include "Adafruit_Sensor.h"
 #include "Adafruit_LSM303_U.h"
 #include "Adafruit_9DOF.h"
+#include "Adafruit_L3GD20_U.h"
 
 class MotionController {
   public:
@@ -24,6 +25,7 @@ class MotionController {
     Adafruit_9DOF                 dof;
     Adafruit_LSM303_Accel_Unified accel;
     Adafruit_LSM303_Mag_Unified   mag;
+    Adafruit_L3GD20_Unified       gyro;
 };
 
 #endif

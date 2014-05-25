@@ -13,12 +13,12 @@ class MotionController {
     void loop();
 
     //Public Variables
-    int current_x_rotation;
-    int current_y_rotation;
-    int current_z_rotation;
-    int current_roll;
-    int current_pitch;
-    int current_heading;
+    float current_x_rotation;
+    float current_y_rotation;
+    float current_z_rotation;
+    float current_roll;
+    float current_pitch;
+    float current_heading;
     void init_sensors();
 
   private:
